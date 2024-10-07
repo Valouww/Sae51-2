@@ -1,0 +1,47 @@
+services:
+ # Récupère la dernière immage d'alloy
+  alloy:
+    image: grafana/alloy:latest
+     # Redirection de port de la machine réelle au port du docker
+    ports:
+      - 12345:12345
+    #Créer les volumes dans le docker, récuper le fichier dans la machine hote vers le docker
+    volumes:
+      - ./alloy-config.alloy:/etc/alloy/config.alloy
+      - shared-logs:/tmp/app-logs/
+    
+    #exécute la commandes au lancement d'alloy, afin d'écouter sur le port concernée depuis l'addresse renseingé donc toute Ip car il est renseignée 0.0.0.0, précise également l'endroit ou les log vont être enregistrée et le fichier de configuration au moment du lancement.
+    command: run --server.http.listen-addr=0.0.0.0:12345 --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy
+    #fait en sorte que alloy dépend de Loki au démarage, Loki doit obligatoire être lancée pour qu'alloy se lance
+    depends_on:
+      - loki
+  loki:
+   # Récupère la dernière immage de Loki
+    image: grafana/loki:main
+    # Redirection de port de la machine réelle au port du docker
+    ports:
+      - "3100:3100"
+    #Créer les volumes dans le docker, récuper le fichier dans la machine hote vers le docker
+    volumes:
+      - ./loki-config.yaml:/etc/loki/local-config.yaml
+    #exécute la commandes au lancement de loki, afin d'appliquer la configuration renseignée
+    command: -config.file=/etc/loki/local-config.yaml
+  grafana:
+  # Récupère la dernière immage de grafana
+    image: grafana/grafana:latest
+    environment:
+    # Ces deux premières lignes permettent l'authentification annonyme et permet que le role admin soit donnée a l'annonyme
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+    # Désactive l'authentification login/password
+      - GF_AUTH_BASIC_ENABLED=false
+    #Mode expérimental
+      - GF_FEATURE_TOGGLES_ENABLE=accessControlOnCall
+    #Instale des plugins au démarage de grafana, ici il s'agit du plugin qui permet un meilleure exploration des log dans loki
+      - GF_INSTALL_PLUGINS=https://storage.googleapis.com/integration-artifacts/grafana-lokiexplore-app/grafana-lokiexplore-app-latest.zip;grafana-lokiexplore-app
+    # Redirection de port de la machine réelle au port du docker, ici en précisant que le protocole TCP est utilisée
+    ports:
+      - 3000:3000/tcp
+      #Créer les volumes dans le docker, récuper le fichier dans la machine hote vers le docker
+      volumes:
+      - ./grafana:/etc/grafana/provisioning

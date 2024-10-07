@@ -1,0 +1,50 @@
+#permet de désactivé l'authentification de loki
+auth_enabled: false
+
+
+#Permet d'authoriser des métadonées dans les logs et de pouvoir gérer le volume des logs
+limits_config:
+  allow_structured_metadata: true
+  volume_enabled: true
+
+
+#Configure le port d'écoute
+server:
+  http_listen_port: 3100
+
+common:
+#Défini depuis quel Ip loki va écoutée,
+  ring:
+    instance_addr: 0.0.0.0
+    kvstore:
+      store: inmemory
+  replication_factor: 1
+  path_prefix: /tmp/loki
+
+schema_config:
+  # apllique la configuration au log qui date d'après le 01/09/2024
+  configs:
+  - from: 2024-09-01
+  #Format de stockage optimisée pour l'organisation en fonction des dates
+    store: tsdb
+    #Indique que les logs seront enregistrée dans le système de fichier local
+    object_store: filesystem
+    schema: v13
+    #Permet de de faire des requête plus rapide grâce au index, en indiquant la durée durant laquel cet index seera utilisée avant de passer au prochain
+    index:
+      prefix: index_
+      period: 24h
+
+storage_config:
+#Indique les paramètre de tsbd
+  tsdb_shipper:
+  #Endroit ou les index vont être stockées ainsi que les donées de cache
+    active_index_directory: /tmp/loki/index
+    cache_location: /tmp/loki/index_cache
+    #Endroit ou les block de logs vont être enregistrée
+  filesystem:
+    directory: /tmp/loki/chunks
+
+#Permet a Loki de traiter des blocks de texte similaire a des formats
+pattern_ingester:
+  enabled: true
