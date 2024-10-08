@@ -39,9 +39,11 @@ services:
       - GF_FEATURE_TOGGLES_ENABLE=accessControlOnCall
     #Instale des plugins au démarage de grafana, ici il s'agit du plugin qui permet un meilleure exploration des log dans loki
       - GF_INSTALL_PLUGINS=https://storage.googleapis.com/integration-artifacts/grafana-lokiexplore-app/grafana-lokiexplore-app-latest.zip;grafana-lokiexplore-app
-    # Redirection de port de la machine réelle au port du docker, ici en précisant que le protocole TCP est utilisée
+    #Redirection de port de la machine réelle au port du docker, ici en précisant que le protocole TCP est utilisée
     ports:
       - 3000:3000/tcp
       #Créer les volumes dans le docker, récuper le fichier dans la machine hote vers le docker
       volumes:
       - ./grafana:/etc/grafana/provisioning
+volumes:
+      shared-logs:
