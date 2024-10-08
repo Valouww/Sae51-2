@@ -54,3 +54,15 @@ services:
     # Créer les volumes dans le docker, récupérer le fichier dans la machine hôte vers le docker
     volumes:
       - ./grafana:/etc/grafana/provisioning
+    depends_on:
+      - loki
+      - alloy
+  nginx:
+    image: nginx:latest
+    containers_name: Nginx
+    ports: 8080:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/log:/var/log/nginx
+    depends_on:
+      - alloy
