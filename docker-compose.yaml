@@ -2,13 +2,15 @@ services:
   # Récupère la dernière image d'alloy
   alloy:
     image: grafana/alloy:latest
+    # Permet de paramétrer le nom du docker
+    container_name: Alloy
     # Redirection de port de la machine réelle au port du docker
     ports:
       - 12345:12345
     # Créer les volumes dans le docker, récupérer le fichier dans la machine hôte vers le docker
     volumes:
       - ./alloy-config.alloy:/etc/alloy/config.alloy
-      - shared-logs:/tmp/app-logs/
+      - ./logs:/tmp/app-logs/
     # Exécute la commande au lancement d'alloy, afin d'écouter sur le port concerné depuis l'adresse renseignée
     # donc toute IP car il est renseigné 0.0.0.0, précise également l'endroit où les logs vont être enregistrés
     # et le fichier de configuration au moment du lancement.
@@ -20,6 +22,8 @@ services:
   loki:
     # Récupère la dernière image de Loki
     image: grafana/loki:main
+    # Permet de paramétrer le nom du docker
+    container_name: Loki
     # Redirection de port de la machine réelle au port du docker
     ports:
       - "3100:3100"
@@ -32,12 +36,14 @@ services:
   grafana:
     # Récupère la dernière image de Grafana
     image: grafana/grafana:latest
+    # Permet de paramétrer le nom du docker
+    container_name: Grafana
     environment:
       # Ces deux premières lignes permettent l'authentification anonyme et que le rôle admin soit donné à l'anonyme
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_AUTH_ANONYMOUS_ENABLED=true
       # Désactive l'authentification login/password
-      - GF_AUTH_BASIC_ENABLED=false
+      - GF_AUTH_BASIC_ENABLED=true
       # Mode expérimental
       - GF_FEATURE_TOGGLES_ENABLE=accessControlOnCall
       # Installe des plugins au démarrage de Grafana, ici le plugin pour une meilleure exploration des logs dans Loki
@@ -48,5 +54,3 @@ services:
     # Créer les volumes dans le docker, récupérer le fichier dans la machine hôte vers le docker
     volumes:
       - ./grafana:/etc/grafana/provisioning
-volumes:
-  shared-logs:

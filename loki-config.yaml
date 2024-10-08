@@ -24,7 +24,7 @@ common:
 schema_config:
   # apllique la configuration au log qui date d'après le 01/09/2024
   configs:
-  - from: 2024-09-01
+  - from: 2020-05-15
   #Format de stockage optimisée pour l'organisation en fonction des dates
     store: tsdb
     #Indique que les logs seront enregistrée dans le système de fichier local
