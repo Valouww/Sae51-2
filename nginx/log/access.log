@@ -1,0 +1,2 @@
+{ "time": "2024-10-09T12:01:23+00:00", "remote_addr": "172.18.0.1", "request": "GET / HTTP/1.1", "status": "200", "body_bytes_sent": "615", "http_referer": "-", "http_user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" }
+{ "time": "2024-10-09T12:01:24+00:00", "remote_addr": "172.18.0.1", "request": "GET /favicon.ico HTTP/1.1", "status": "404", "body_bytes_sent": "153", "http_referer": "http://localhost:8080/", "http_user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" }
