@@ -10,7 +10,7 @@ services:
     # Créer les volumes dans le docker, récupérer le fichier dans la machine hôte vers le docker
     volumes:
       - ./alloy-config.alloy:/etc/alloy/config.alloy
-      - ./logs:/tmp/app-logs/
+      - ./nginx/log:/tmp/app-logs/
     # Exécute la commande au lancement d'alloy, afin d'écouter sur le port concerné depuis l'adresse renseignée
     # donc toute IP car il est renseigné 0.0.0.0, précise également l'endroit où les logs vont être enregistrés
     # et le fichier de configuration au moment du lancement.

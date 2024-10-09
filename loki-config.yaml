@@ -39,11 +39,11 @@ storage_config:
 #Indique les paramètre de tsbd
   tsdb_shipper:
   #Endroit ou les index vont être stockées ainsi que les donées de cache
-    active_index_directory: /tmp/loki/index
-    cache_location: /tmp/loki/index_cache
+    active_index_directory: /loki/index
+    cache_location: /loki/cache
     #Endroit ou les block de logs vont être enregistrée
   filesystem:
-    directory: /tmp/loki/chunks
+    directory: /loki/chunks
 
 #Permet a Loki de traiter des blocks de texte similaire a des formats
 pattern_ingester:
