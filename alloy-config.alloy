@@ -1,31 +1,21 @@
-local.file_match "applogs" {
-    path_targets = [{"__path__" = "/tmp/app-logs/*log"}]
-}
+server:
+  http:
+    listen-addr: "0.0.0.0:12345"
 
-loki.source.file "local_files" {
-    targets    = local.file_match.applogs.targets
-    forward_to = [loki.process.add_new_label.receiver]
-}
+storage:
+  path: /var/lib/alloy/data
 
-loki.process "add_new_label" {
-    stage.logfmt {
-        mapping = {
-            "extracted_level" = "level",
-        }
-    }
+inputs:
+  - name: nginx
+    type: file
+    path: /var/log/nginx/access.log
+    format: json
+    labels:
+      job: "nginx_logs"
 
-    // Add the value of "extracted_level" from the extracted map as a "level" label
-    stage.labels {
-        values = {
-            "level" = "extracted_level",
-        }
-    }
-
-     forward_to = [loki.write.local_loki.receiver]
-}
-
-loki.write "local_loki" {
-    endpoint {
-        url = "http://loki:3100/loki/api/v1/push"
-    }
-}
+outputs:
+  - name: loki
+    type: loki
+    url: "http://loki:3100/loki/api/v1/push"
+    labels:
+      source: "nginx"
