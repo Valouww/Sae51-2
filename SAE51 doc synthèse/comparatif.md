@@ -16,7 +16,8 @@ Problème connu | Lent sur gros volume  | Node setup  | Gestions indices   |
 Scalabilité |Faible   | Haute  |  Haute |   
 Modèle eco|Gratuit   | Gratuit  |  Gratuit |
 Conso ressource| Faible  | Gourmand  |Gourmand   |   
-Stockage Data | Cloud |Gourmand   | Gourmand  |   
+Stockage Data | Cloud |Gourmand   | Gourmand  |
+
 ``
 Pour suivre l'activité des 3 solutions nous avons choisis de comparer l'activité sur Github. La taille des commits est bien entendu variable mais donnes tout de même une indication de l'implication des utilisateurs sur la solution.
 
