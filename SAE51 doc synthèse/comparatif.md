@@ -37,8 +37,10 @@ Notre choix entre Graylog, Loki et Elastic dépendra en grande partie de nos bes
 
 Graylog utilise une interface plus simple et agréable qu'Elastic Stack.
 Cependant, il utilise Elastic Search dans son fonctionnement et cela ne nous convient pas au vu de la configuration nécéssaire.
-Elasticsearch indexe toutes les données dans chaque champ, et chaque champ indexé dispose d'une structure de données dédiée et optimisée. Une configuration minutieuse est nécessaire ainsi qu'une haute compréhension.
-Pour la SAE51, nous avons opté pour Loki. Pourquoi ? Parce que c'est l'outil le plus simple à prendre en main et qu'il répond parfaitement à nos besoins actuels. Il nous permet de centraliser nos logs rapidement et efficacement, sans avoir à nous plonger dans des configurations complexes.
+
+Elasticsearch indexe toutes les données dans chaque champ, et chaque champ indexé dispose d'une structure de données dédiée et optimisée. Une configuration minutieuse est nécessaire ainsi qu'une haute compréhension de la solution.
+
+Pour la SAE51, nous avons opté pour Loki. Pourquoi ? Parce que c'est l'outil le plus simple à prendre en main et qu'il répond parfaitement à nos besoins actuels ainsi qu'à nos connaissances. Il nous permet de centraliser nos logs rapidement et efficacement, sans avoir à nous plonger dans des configurations complexes.
 
 ## Sources
 https://stackshare.io/stackups/graylog-vs-loki
