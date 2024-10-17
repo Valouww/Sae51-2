@@ -10,7 +10,7 @@ Produire un document de synthèse présentant les solutions libres (Loki, Elasti
 ø     |Loki   |Elastic   | Graylog  |
  |------|-------|---|---|
 Communauté Github | 7k3+ commit   | 79K+ commit | 25k+ commit   | 
-Facilité de mise en place | Très facile  | Difficile  | Facile  |   
+Facilité de mise en place | Facile  | Difficile  | Moyen  |   
 Filtrage des logs | Basique  | Puissant  |Puissant   |     
 Problème connu | Lent sur gros volume  | Node setup  | Gestions indices   |   
 Scalabilité |Faible   | Haute  |  Haute |   
