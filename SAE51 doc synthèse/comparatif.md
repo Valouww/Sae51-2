@@ -21,15 +21,6 @@ Stockage Data | Cloud |Gourmand   | Gourmand  |
 
 Pour suivre l'activité des 3 solutions nous avons choisis de comparer l'activité sur Github. La taille des commits est bien entendu variable mais donnes tout de même une indication de l'implication des utilisateurs sur la solution.
 
-## Sources
-https://stackshare.io/stackups/graylog-vs-loki
-https://stackshare.io/stackups/elasticsearch-vs-graylog
-https://signoz.io/blog/loki-vs-elasticsearch/
-https://github.com/
-
-
-
-
 
 ## Graylog
 est une solution mature, complète et personnalisable, idéale pour les entreprises qui recherchent une plateforme de gestion de logs robuste et intuitive. Elle offre une large gamme de fonctionnalités et une communauté active.
@@ -48,6 +39,15 @@ Graylog utilise une interface plus simple et agréable qu'Elastic Stack.
 Cependant, il utilise Elastic Search dans son fonctionnement et cela ne nous convient pas au vu de la configuration nécéssaire.
 Elasticsearch indexe toutes les données dans chaque champ, et chaque champ indexé dispose d'une structure de données dédiée et optimisée. Une configuration minutieuse est nécessaire ainsi qu'une haute compréhension.
 Pour la SAE51, nous avons opté pour Loki. Pourquoi ? Parce que c'est l'outil le plus simple à prendre en main et qu'il répond parfaitement à nos besoins actuels. Il nous permet de centraliser nos logs rapidement et efficacement, sans avoir à nous plonger dans des configurations complexes.
+
+## Sources
+https://stackshare.io/stackups/graylog-vs-loki
+
+https://stackshare.io/stackups/elasticsearch-vs-graylog
+
+https://signoz.io/blog/loki-vs-elasticsearch/
+
+https://github.com/
 
 
 
