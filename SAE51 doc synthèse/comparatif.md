@@ -6,7 +6,7 @@ Corentin CHRETIEN***
 ## Objectif
 
 Produire un document de synthèse présentant les solutions libres (Loki, Elastic, Graylog) de centralisation et présentation de logs, nous donnerons aussi leurs points-clé (features, communauté associée, etc.) et leurs avantages et inconvénients respectifs :
-``
+`
 ø     |Loki   |Elastic   | Graylog  |
  |------|-------|---|---|
 Communauté Github | 7k3+ commit   | 79K+ commit | 25k+ commit   | 
@@ -18,7 +18,7 @@ Modèle eco|Gratuit   | Gratuit  |  Gratuit |
 Conso ressource| Faible  | Gourmand  |Gourmand   |   
 Stockage Data | Cloud |Gourmand   | Gourmand  |
 
-``
+`
 Pour suivre l'activité des 3 solutions nous avons choisis de comparer l'activité sur Github. La taille des commits est bien entendu variable mais donnes tout de même une indication de l'implication des utilisateurs sur la solution.
 
 ## Sources
