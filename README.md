@@ -27,5 +27,6 @@ Afin de mieux comprendre, voici un schéma de leur fonctionnement :
 Pour tester cette configuration, vous aurez besoin de :
 
 * Docker et Docker Compose installés sur votre machine.
-  Si il ne sont pas installée sur votre machine, effectuer les commandes: « sudo apt install docker » et « sudo apt install docker-compose »
+  S'ils ne sont pas installés sur votre machine, effectuez les commandes suivantes :
+  ``sudo apt install docker`` et ``sudo apt install docker-compose``.
 * Un clone du projet avec les fichiers de configuration pour Grafana, Loki, Alloy, et Nginx ou bien le fichier Zip de ce projet.
