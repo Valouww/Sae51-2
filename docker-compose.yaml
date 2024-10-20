@@ -56,7 +56,6 @@ services:
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
       - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
       - ./grafana/provisioning/plugins:/etc/grafana/provisioning/plugins
-      - ./grafana/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - loki
       - alloy
