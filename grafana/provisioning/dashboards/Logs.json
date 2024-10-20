@@ -18,6 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -307,6 +308,7 @@
       "type": "logs"
     }
   ],
+  "refresh": "30s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -318,7 +320,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "New dashboard",
-  "version": 0,
+  "title": "Logs Dashboard",
+  "uid": "ee1g95mcwn37ka",
+  "version": 1,
   "weekStart": ""
 }
