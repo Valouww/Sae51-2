@@ -37,3 +37,12 @@ Pour tester cette configuration, vous aurez besoin de :
     git clone https://github.com/votre-repo/monitoring-stack.git
     cd Sae51-2
    ```
+2. Vérifier que le service docker-compose soit actif:
+   ```
+    systemctl status docker-compose
+   ```   
+3. Lancer le Docker-compose :
+   ```
+    docker-compose up -d
+   ```   
+4. 
