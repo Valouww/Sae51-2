@@ -45,4 +45,10 @@ Pour tester cette configuration, vous aurez besoin de :
    ```
    docker-compose up -d
    ```   
-4. 
+4. Accéder à l'interface Grafana :
+
+   Une fois que les conteneurs sont en marche (Cela peut prendres quelques secondes), vous pouvez accéder à Grafana via votre navigateur à l'URL suivante :
+   ```
+   docker-compose up -d
+   ```   
+5.  
