@@ -1,7 +1,0 @@
-providers:
-  - name: 'Loki Logs Provider'
-    orgId: 1
-    folder: ''
-    type: file
-    options:
-      path: /etc/grafana/provisioning/dashboards  # Chemin vers les fichiers JSON des dashboards
