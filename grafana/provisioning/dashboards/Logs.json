@@ -1,33 +1,12 @@
 {
-  "id": null,
-  "uid": "cLV5GDCkz",
-  "title": "New dashboard",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
-  "editable": true,
-  "hideControls": false,
-  "graphTooltip": 1,
-  "panels": [],
-  "time": {
-    "from": "now-6h",
-    "to": "now"
-  },
-  "timepicker": {
-    "time_options": [],
-    "refresh_intervals": []
-  },
-  "templating": {
-    "list": []
-  },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "5s",
-  "schemaVersion": 17,
-  "version": 0,
-  "links": [],
-  "panels": [
+    "id": null,
+    "title": "Logs",
+    "tags": ["loki"],
+    "timezone": "browser",
+    "editable": true,
+    "schemaVersion": 27,
+    "version": 1,
+    "panels": [
       {
         "datasource": "loki",
         "type": "logs",
@@ -51,4 +30,10 @@
         }
       }
     ],
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    }
+  },
+  "overwrite": true
 }
