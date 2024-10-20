@@ -12,7 +12,7 @@
       {
         "datasource": "loki",
         "type": "logs",
-        "title": "Access Logs",
+        "title": "Logs",
         "targets": [
           {
             "expr": "{filename=\"/tmp/app-logs/access.log\"} |= \"\"",
