@@ -56,9 +56,9 @@ Pour tester cette configuration, vous aurez besoin de :
 ## Ce que vous êtes censé voir à l'exécution
 Lorsque le projet est en marche, vous devriez observer les logs du serveur Nginx (qui sont générés lors de requêtes HTTP) dans Grafana. Cela inclut :
 
-Les requêtes HTTP traitées par Nginx (par exemple, les GET ou POST).
-Les erreurs potentielles (par exemple, les erreurs 404 ou 500).
-La possibilité de filtrer les logs par niveau de gravité (info, error, debug, etc.).
+* Les requêtes HTTP traitées par Nginx (par exemple, les GET ou POST).
+* Les erreurs potentielles (par exemple, les erreurs 404 ou 500).
+* La possibilité de filtrer les logs par niveau de gravité (info, error, debug, etc.).
 
 
 ## Points clés du projet
