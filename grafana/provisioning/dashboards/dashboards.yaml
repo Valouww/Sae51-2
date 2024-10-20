@@ -1,1 +1,7 @@
 providers:
+  - name: 'default'  # Nom du fournisseur, utilisé pour identifier le fournisseur de dashboards
+    orgId: 1          # Identifiant de l'organisation (1 est souvent l'organisation par défaut)
+    folder: ''        # Dossier où les dashboards seront stockés (la chaîne vide signifie le dossier racine)
+    type: file        # Type de fournisseur, ici c'est 'file' pour des fichiers JSON
+    options:
+      path: /etc/grafana/provisioning/dashboards  # Chemin où Grafana recherchera les fichiers JSON des dashboards
