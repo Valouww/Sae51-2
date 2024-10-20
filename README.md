@@ -55,7 +55,7 @@ Pour tester cette configuration, vous aurez besoin de :
 
   Afin de voir les logs, il vous suffit juste d'ouvrir le menu, de se rendre dans la categorie Dashboard et de choisir (en cliquant dessus) le dashboard intitulé "Logs Dashboard". Vous voila sur la page de supervision des logs
 
-6..  Générer les premiers logs:
+6.  Générer les premiers logs:
 
   Afin de faire augmenter les logs, rendez-vous sur la page suivante:
   ```  
