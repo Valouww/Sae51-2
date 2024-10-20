@@ -2,7 +2,7 @@
 
 ## Rappel de l'objectif
 
-Produire un Dockerfile/Docker-compose qui met un oeuvre une situation simple de collecte de logs, basée sur une des solutions existantes.
+Produire un Dockerfile/Docker-compose qui met un oeuvre une situation simple de collecte de logs, basée sur une des solutions existantes.Cela permet de visualiser et de filtrer les logs, comme les erreurs ou les requêtes HTTP, de manière centralisée.
 
 ## Description
 
@@ -19,3 +19,7 @@ Notre docker-compose lance 4 dockers dont leur rôle est:
 
 Afin de mieux comprendre, voici un schéma de leur fonctionnement :
 ![Diagram_Fonctionnement](Diagram_Fonctionnement.png)
+
+
+## Mise en place
+### Prérequis
