@@ -17,7 +17,7 @@
         "title": "Nginx Logs",
         "targets": [
           {
-            "expr": "{job=\"nginx\"}",  // Requête Loki pour récupérer les logs avec le label "job" = "nginx"
+            "expr": "{job=\"nginx\"}", 
             "refId": "A"
           }
         ],
