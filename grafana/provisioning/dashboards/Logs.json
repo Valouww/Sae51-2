@@ -1,16 +1,20 @@
 {
+  "dashboard": {
     "id": null,
-    "title": "Logs",
-    "tags": ["loki"],
+    "uid": "basic-dashboard",
+    "title": "Basic Dashboard",
+    "tags": ["test"],
     "timezone": "browser",
-    "editable": true,
     "schemaVersion": 27,
     "version": 1,
     "panels": [
       {
-        "datasource": "loki",
+        "datasource": {
+          "type": "loki",
+          "uid": "Loki"
+        },
         "type": "logs",
-        "title": "Logs",
+        "title": "Sample Logs",
         "targets": [
           {
             "expr": "{filename=\"/tmp/app-logs/access.log\"} |= \"\"",
