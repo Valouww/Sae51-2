@@ -1,7 +1,6 @@
 {
   "dashboard": {
     "id": null,
-    "uid": "loki-logs-dashboard",
     "title": "Logs",
     "tags": ["loki"],
     "timezone": "browser",
