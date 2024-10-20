@@ -30,3 +30,10 @@ Pour tester cette configuration, vous aurez besoin de :
   S'ils ne sont pas installés sur votre machine, effectuez les commandes suivantes :
   ``sudo apt install docker`` et ``sudo apt install docker-compose``.
 * Un clone du projet avec les fichiers de configuration pour Grafana, Loki, Alloy, et Nginx ou bien le fichier Zip de ce projet.
+
+### Démarrage du projet
+1. Cloner le projet :
+   ```
+  git clone https://github.com/votre-repo/monitoring-stack.git
+  cd Sae51-2
+   ```
