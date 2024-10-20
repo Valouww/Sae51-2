@@ -17,7 +17,7 @@
         "title": "Access Logs",
         "targets": [
           {
-            "expr": "{filename=\"/tmp/app-logs/access.log\"} |= \"\"",  // Requête Loki avec filtre sur le fichier access.log
+            "expr": "{filename=\"/tmp/app-logs/access.log\"} |= \"\"",
             "refId": "A"
           }
         ],
