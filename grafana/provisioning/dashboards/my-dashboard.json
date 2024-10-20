@@ -1,0 +1,43 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "loki-logs-dashboard",
+    "title": "Logs Dashboard",
+    "tags": ["loki", "logs"],
+    "timezone": "browser",
+    "schemaVersion": 27,
+    "version": 1,
+    "panels": [
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "Loki"
+        },
+        "type": "logs",
+        "title": "Nginx Logs",
+        "targets": [
+          {
+            "expr": "{job=\"nginx\"}",  // Requête Loki pour récupérer les logs avec le label "job" = "nginx"
+            "refId": "A"
+          }
+        ],
+        "gridPos": {
+          "h": 10,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "options": {
+          "showLabels": true,
+          "showTime": true,
+          "wrapLogMessage": true
+        }
+      }
+    ],
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    }
+  },
+  "overwrite": true
+}
