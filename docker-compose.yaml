@@ -53,7 +53,9 @@ services:
       - 3000:3000/tcp
     # Créer les volumes dans le docker, récupérer le fichier dans la machine hôte vers le docker
     volumes:
-      - ./grafana:/etc/grafana/provisioning
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - loki
       - alloy
