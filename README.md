@@ -51,9 +51,17 @@ Pour tester cette configuration, vous aurez besoin de :
    ```
    docker-compose up -d
    ```   
-5.  Visualisation des logs dans Grafana :
+5. Visualisation des logs dans Grafana :
 
-6.  Générer les premiers logs:
+  Afin de voir les logs, il vous suffit juste d'ouvrir le menu, de se rendre dans la categorie Dashboard et de choisir (en cliquant dessus) le dashboard intitulé "New Dashboard". Vous voila sur la page de supervision des logs
+
+6..  Générer les premiers logs:
+
+  Afin de faire augmenter les logs, rendez-vous sur la page suivante:
+```  
+http://localhost:8080
+```  
+  Et retourner sur le dashboard pour voir les nombres augmenter.
 
 ## Ce que vous êtes censé voir à l'exécution
 Lorsque le projet est en marche, vous devriez observer les logs du serveur Nginx (qui sont générés lors de requêtes HTTP) dans Grafana. Cela inclut :
