@@ -34,15 +34,15 @@ Pour tester cette configuration, vous aurez besoin de :
 ### Démarrage du projet
 1. Cloner le projet :
    ```
-    git clone https://github.com/votre-repo/monitoring-stack.git
-    cd Sae51-2
+   git clone https://github.com/votre-repo/monitoring-stack.git
+   cd Sae51-2
    ```
 2. Vérifier que le service docker-compose soit actif:
    ```
-    systemctl status docker-compose
+   systemctl status docker-compose
    ```   
 3. Lancer le Docker-compose :
    ```
-    docker-compose up -d
+   docker-compose up -d
    ```   
 4. 
