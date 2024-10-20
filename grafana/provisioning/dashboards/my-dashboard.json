@@ -2,17 +2,15 @@
   "dashboard": {
     "id": null,
     "uid": "loki-logs-dashboard",
-    "title": "Logs Dashboard",
-    "tags": ["loki", "logs"],
+    "title": "Logs",
+    "tags": ["loki"],
     "timezone": "browser",
+    "editable": true,
     "schemaVersion": 27,
     "version": 1,
     "panels": [
       {
-        "datasource": {
-          "type": "loki",
-          "uid": "Loki"
-        },
+        "datasource": "loki",
         "type": "logs",
         "title": "Access Logs",
         "targets": [
