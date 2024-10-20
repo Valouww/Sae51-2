@@ -53,6 +53,8 @@ Pour tester cette configuration, vous aurez besoin de :
    ```   
 5.  Visualisation des logs dans Grafana :
 
+6.  Générer les premiers logs:
+
 ## Ce que vous êtes censé voir à l'exécution
 Lorsque le projet est en marche, vous devriez observer les logs du serveur Nginx (qui sont générés lors de requêtes HTTP) dans Grafana. Cela inclut :
 
