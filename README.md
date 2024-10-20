@@ -53,7 +53,7 @@ Pour tester cette configuration, vous aurez besoin de :
    ```   
 5. Visualisation des logs dans Grafana :
 
-  Afin de voir les logs, il vous suffit juste d'ouvrir le menu, de se rendre dans la categorie Dashboard et de choisir (en cliquant dessus) le dashboard intitulé "Logs Dashboard". Vous voila sur la page de supervision des logs
+    Afin de voir les logs, il vous suffit juste d'ouvrir le menu, de se rendre dans la categorie Dashboard et de choisir (en cliquant dessus) le dashboard intitulé "Logs Dashboard". Vous voila sur la page de supervision des logs
 
 6.  Générer les premiers logs:
 
