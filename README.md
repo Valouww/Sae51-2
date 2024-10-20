@@ -53,11 +53,16 @@ Pour tester cette configuration, vous aurez besoin de :
    ```   
 5.  Visualisation des logs dans Grafana :
 
-* Allez dans Explore dans le menu de Grafana.
-* Sélectionnez Loki comme source de données.
 
+## Points clés du projet
+* Ce qui a bien fonctionné :
+** Fichier de configuration : Grace au travail préparatoire et a de multiples recherche, les fichiers de configuration on été facile a été écrire et comprendre
+** Visualisation des erreurs et niveaux de logs : L'ajout de labels personnalisés comme level permet de trier et visualiser efficacement les erreurs critiques dans l'interface de Grafana.
 
-
+* Problèmes rencontrés :
+** Configuration des volumes : Lors de la configuration des volumes, il a fallu s'assurer que les chemins montés entre Docker et l'hôte étaient corrects. Les erreurs de montage pouvaient empêcher Alloy de lire les logs Nginx.
+** Intégration de Grafana avec Loki : A cause du problèmes de configuration des volumes, nous avons passer beaucoup de temps a faire en sorte que Loki soit reconnu par défaut comme Datasources
+   de
 ## Test supplémentaire :
 Vous pouvez générer des logs supplémentaires en effectuant des requêtes vers le serveur Nginx via votre navigateur ou en utilisant un outil comme curl.
    ```
