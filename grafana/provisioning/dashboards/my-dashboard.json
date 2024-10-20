@@ -14,10 +14,10 @@
           "uid": "Loki"
         },
         "type": "logs",
-        "title": "Nginx Logs",
+        "title": "Access Logs",
         "targets": [
           {
-            "expr": "{job=\"nginx\"}", 
+            "expr": "{filename=\"/tmp/app-logs/access.log\"} |= \"\"",  // Requête Loki avec filtre sur le fichier access.log
             "refId": "A"
           }
         ],
