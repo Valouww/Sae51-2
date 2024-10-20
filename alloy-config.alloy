@@ -1,7 +1,9 @@
+//Précise le path des logs qui doivent être surveillé
 local.file_match "applogs" {
     path_targets = [{"__path__" = "/tmp/app-logs/*log"}]
 }
 
+//Récupère les fichier a surveillé dans le path pour les envoyées vers son traitement renseigné après
 loki.source.file "local_files" {
     targets    = local.file_match.applogs.targets
     forward_to = [loki.process.add_new_label.receiver]
@@ -14,7 +16,7 @@ loki.process "add_new_label" {
         }
     }
 
-    // Add the value of "extracted_level" from the extracted map as a "level" label
+    // Extrait les informations dans les fichiers sous un format, puis ajoute des labels des gravité des logs, puis sont envoyée a Loki
     stage.labels {
         values = {
             "level" = "extracted_level",
@@ -24,6 +26,8 @@ loki.process "add_new_label" {
      forward_to = [loki.write.local_loki.receiver]
 }
 
+
+//Précise le path ou envoyer les logs qui viennent d'être labéler
 loki.write "local_loki" {
     endpoint {
         url = "http://loki:3100/loki/api/v1/push"
