@@ -51,4 +51,15 @@ Pour tester cette configuration, vous aurez besoin de :
    ```
    docker-compose up -d
    ```   
-5.  
+5.  Visualisation des logs dans Grafana :
+
+* Allez dans Explore dans le menu de Grafana.
+* Sélectionnez Loki comme source de données.
+
+
+
+## Test supplémentaire :
+Vous pouvez générer des logs supplémentaires en effectuant des requêtes vers le serveur Nginx via votre navigateur ou en utilisant un outil comme curl.
+   ```
+   curl http://localhost:8080
+   ```   
